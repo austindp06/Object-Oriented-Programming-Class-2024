@@ -1,0 +1,44 @@
+import pickle
+n = 1
+
+
+class CourseGrade:
+    def __init__(self):
+        self.course = ""
+        self.name = []
+        self.ID = []
+        self.grade = []
+
+    def get_details(self):
+        self.course = input("Enter course title: ")
+        for x in range(1, 6):
+            self.name.append(input("Enter student's name: "))
+            self.ID.append(input("Enter student ID: "))
+            self.grade.append(input("Enter student grade(%): "))
+
+def display(self):
+    print("Course: ", self.course)
+    print("Student name: ", self.name)
+    print("Student ID: ", self.ID)
+    print("Student grade: ", self.grade)
+
+
+s1 = CourseGrade()
+s1.get_details()
+
+f = open('grades_info.dat', 'ab')
+pickle.dump(s1, f)
+f.close()
+
+f = open('grades_info.dat', 'rb')
+
+while 1:
+    try:
+        data = pickle.load(f)
+        print("-----", data.course, "-----")
+        print("Student name: ", data.name)
+        print("Student ID: ", data.ID)
+        print("Student grade: ", data.grade)
+    except EOFError:
+        break
+f.close()
