@@ -1,0 +1,412 @@
+mycart = []
+mytotal = 0
+mylocation = ""
+i = 4
+print("Before we proceed, please enter your phone number and email address:")
+user_phone = input("Input phone number here (include area code): ")
+user_email = input("Input email here: ")
+
+def option1(mytotal):
+    while 1:
+        print("a. Mona Lisa")
+        print("b. Starry Night")
+        print("c. The Creation of Adam")
+        print("d. Birth of Venus")
+        print("e. The Thinker")
+        print("f. The Scream")
+        print("g. The Statue of David")
+        print("h. The Last Supper")
+        y = input("Select a piece to view: ")
+        z = 0
+
+        if y == "a":
+            MLdict = {"Piece Name: ": "Mona Lisa", "Year of Creation: ": "1503", "Creator: ": "Leonardo da Vinci",
+            "Price: ": "$10,000"}
+            print(MLdict)
+            print("The Mona Lisa depicts a portrait of a young woman with a slight smile in front of a natural landscape.")
+            z = input("Are you sure you wish to add this to your cart (y/n)? ")
+
+            if z == "y":
+                mycart.append("Mona Lisa")
+                break
+
+            if z == "n":
+                print("Your cart: ", mycart)
+                break
+
+        if y == "b":
+            SNdict = {"Piece Name: ": "Starry Night", "Year of Creation: ": "1889", "Creator: ": "Vincent van Gogh","Price: ": "$12,000"}
+            print(SNdict)
+            print("Starry Night is a Post-Impressionist painting featuring a night sky filled with bright stars overlooking a quaint village.")
+            z = input("Are you sure you wish to add this to your cart (y/n)? ")
+
+            if z == "y":
+                mycart.append("Starry Night")
+                break
+
+            if z == "n":
+                print("Your cart: ", mycart)
+                break
+
+        if y == "c":
+            TCOAdict = {"Piece Name: ": "The Creation of Adam", "Year of Creation: ": "1512","Creator: ": "Michelangelo", "Price: ": "$22,000"}
+            print(TCOAdict)
+            print("The Creation of Adam is the massive piece covering the ceiling of the Sistine Chapel. It took four years for Michelangelo to finish.")
+            z = input("Are you sure you wish to add this to your cart (y/n)? ")
+
+            if z == "y":
+                mycart.append("The Creation of Adam")
+                break
+
+            if z == "n":
+                print("Your cart: ", mycart)
+                break
+
+        if y == "d":
+            TBOVdict = {"Piece Name: ": "The Birth of Venus", "Year of Creation: ": "1486",
+            "Creator: ": "Alessandro di Mariano Filipepi", "Price: ": "$15,000"}
+            print(TBOVdict)
+            print("The Birth of Venus is an early Renaissance piece featuring the Roman goddess, Venus, emerging from a comically oversized clam.")
+            z = input("Are you sure you wish to add this to your cart (y/n)? ")
+
+        if z == "y":
+            mycart.append("The Birth of Venus")
+            break
+
+        if z == "n":
+            print("Your cart: ", mycart)
+            break
+
+        if y == "e":
+            TTdict = {"Piece Name: ": "The Thinker", "Year of Creation: ": "1904","Creator: ": "Fonderie Alexis Rudier", "Price: ": "$16,000"}
+            print(TTdict)
+            print("The Thinker, an statue of a man seated in deep thought, was sculpted in 1902 as a larger version of its original 70 centimeter counterpart, The Poet.")
+            z = input("Are you sure you wish to add this to your cart (y/n)? ")
+
+        if z == "y":
+            mycart.append("The Thinker")
+            break
+
+        if z == "n":
+            print("Your cart: ", mycart)
+            break
+
+        if y == "f":
+            TSdict = {"Piece Name: ": "The Scream", "Year of Creation: ": "1893", "Creator: ": "Edvard Munch","Price: ": "$9,000"}
+            print(TSdict)
+            print("The Scream is a Norwegian piece depicting a deformed figure screaming on a dock extending out over seemingly endless water.")
+            z = input("Are you sure you wish to add this to your cart (y/n)? ")
+
+        if z == "y":
+            mycart.append("The Scream")
+            break
+
+        if z == "n":
+            print("Your cart: ", mycart)
+            break
+
+        if y == "g":
+            TSODdict = {"Piece Name: ": "The Statue of David", "Year of Creation: ": "1504", "Creator: ": "Michelangelo", "Price: ": "$16,000"}
+            print(TSODdict)
+            print("The Statue of David is a statue sculpted for one of the buttresses of the Cathedral of Florence.")
+            z = input("Are you sure you wish to add this to your cart (y/n)? ")
+
+        if z == "y":
+            mycart.append("The Statue of David")
+            break
+
+        if z == "n":
+            print("Your cart: ", mycart)
+            break
+
+        if y == "h":
+            TLSdict = {"Piece Name: ": "The Last Supper", "Year of Creation: ": "1498","Creator: ": "Leonardo da Vinci", "Price: ": "$17,000"}
+            print(TLSdict)
+            print("The Last Supper was a mural painted during the Italian High Renaissance over a four year span. It depicts the famous Last Supper of Jesus Christ with His disciples.")
+            z = input("Are you sure you wish to add this to your cart (y/n)? ")
+
+        if z == "y":
+            mycart.append("The Last Supper")
+            break
+
+        if z == "n":
+            print("Your cart: ", mycart)
+            break
+
+
+def option2(mytotal):
+    print("Your cart: ", mycart)
+    removal = input("Select the piece you wish to remove (use letter ID): ")
+
+    if removal == "a":
+        if "Mona Lisa" in mycart:
+            mycart.remove("Mona Lisa")
+            print("Removal successful")
+        else:
+            print("That piece is not currently in your cart. Check to ensure the correct letter ID was provided.")
+
+    if removal == "b":
+        if "Starry Night" in mycart:
+            mycart.remove("Starry Night")
+            print("Removal successful")
+        else:
+            print("That piece is not currently in your cart. Check to ensure the correct letter ID was provided.")
+
+    if removal == "c":
+        if "The Creation of Adam" in mycart:
+            mycart.remove("The Creation of Adam")
+            print("Removal successful")
+        else:
+            print("That piece is not currently in your cart. Check to ensure the correct letter ID was provided.")
+
+    if removal == "d":
+        if "The Birth of Venus" in mycart:
+            mycart.remove("The Birth of Venus")
+            print("Removal successful")
+        else:
+            print("That piece is not currently in your cart. Check to ensure the correct letter ID was provided.")
+
+    if removal == "e":
+        if "The Thinker" in mycart:
+            mycart.remove("The Thinker")
+            print("Removal successful")
+        else:
+            print("That piece is not currently in your cart. Check to ensure the correct letter ID was provided.")
+
+    if removal == "f":
+        if "The Scream" in mycart:
+            mycart.remove("The Scream")
+            print("Removal successful")
+        else:
+            print("That piece is not currently in your cart. Check to ensure the correct letter ID was provided.")
+
+    if removal == "g":
+        if "The Statue of David" in mycart:
+            mycart.remove("The Statue of David")
+            print("Removal successful")
+        else:
+            print("That piece is not currently in your cart. Check to ensure the correct letter ID was provided.")
+
+    if removal == "h":
+        if "The Last Supper" in mycart:
+            mycart.remove("The Last Supper")
+            print("Removal successful")
+        else:
+            print("That piece is not currently in your cart. Check to ensure the correct letter ID was provided.")
+
+
+def option3(mytotal):
+    global mylocation
+    
+    class USA:
+        def __init__(self):
+            self.my_country = "USA"
+            self.my_city = "New York"
+            self.my_address = "309 Ave. C, 10009"
+            self.my_city2 = "Chicago"
+            self.my_address2 = "3936 W 16th St."
+
+        def display(self):
+            print(self.my_country)
+            print(self.my_city)
+            print(self.my_address)
+
+        def display2(self):
+            print(self.my_country)
+            print(self.my_city2)
+            print(self.my_address2)
+
+    class France:
+        def __init__(self):
+            self.my_country = "France"
+            self.my_city = "Paris"
+            self.my_address = "10 Chau. de la Muette, 75016"
+            self.my_city2 = "Toulouse"
+            self.my_address2 = "13 Rue des Arcs Saint-Cyprien, 31300"
+
+        def display(self):
+            print(self.my_country)
+            print(self.my_city)
+            print(self.my_address)
+
+        def display2(self):
+            print(self.my_city)
+            print(self.my_address)
+
+    class Canada:
+        def __init__(self):
+            self.my_country = "Canada"
+            self.my_city = "Toronto"
+            self.my_address = "70 Oakdale Road, ON M3N 1V9"
+            self.my_city2 = "Calgary"
+            self.my_address2 = "17 Ave SW, AB T2T 0C3"
+
+        def display(self):
+            print(self.my_country)
+            print(self.my_city)
+            print(self.my_address)
+
+        def display2(self):
+            print(self.my_country)
+            print(self.my_city2)
+            print(self.my_address2)
+
+    while 1:
+        print("Select a country from which to pickup your order. You will be prompted to select an address afterwards.")
+        print("1. United States of America")
+        print("2. France")
+        print("3. Canada")
+        print("4. Go back")
+        selection = input()
+
+        usa_obj = USA()
+        fra_obj = France()
+        can_obj = Canada()
+
+        if selection == "1":
+            print("You have selected the United States of America. Below are valid locations. Select one or return to previous menu for more options.")
+            while 1:
+                print("------1-----")
+                usa_obj.display()
+                print("-----2-----")
+                usa_obj.display2()
+                print("3. Go back")
+                location_select = input()
+
+                if location_select == "1":
+                    mylocation = "USA, New York, 309 Ave. C, 10009"
+                    print("Location confirmed. You may make further changes to your cart or proceed to checkout.")
+                    break
+
+                if location_select == "2":
+                    mylocation = "USA, Chicago, 3936 W 16th St."
+                    print("Location confirmed. You may make further changes to your cart or proceed to checkout.")
+                    break
+
+                if location_select == "3":
+                    break
+                break
+
+        if selection == "2":
+            print("You have selected France. Below are valid locations. Select one or return to previous menu for more options.")
+            while 1:
+                print("-----1-----")
+                fra_obj.display()
+                print("-----2-----")
+                fra_obj.display2()
+                print("3. Go back")
+                location_select = input()
+
+                if location_select == "1":
+                    mylocation = "France, Paris, 10 Chau. de la Muette, 75016"
+                    print("Location confirmed. You may make further changes to your cart or proceed to checkout.")
+                    break
+
+                if location_select == "2":
+                    mylocation = "France, Toulouse, 13 Rue des Arcs Saint-Cyprien, 31300"
+                    print("Location confirmed. You may make further changes to your cart or proceed to checkout.")
+                    break
+
+                if location_select == "3":
+                    break
+
+        if selection == "3":
+            print("You have selected Canada. Below are valid locations. Select one or return to previous menu for more options.")
+            while 1:
+                print("-----1-----")
+                can_obj.display()
+                print("-----2-----")
+                can_obj.display2()
+                print("3. Go back")
+                location_select = input()
+
+                if location_select == "1":
+                    mylocation = "Canada, Toronto, 70 Oakdale Road, ON M3N 1V9"
+                    print("Location confirmed. You may make further changes to your cart or proceed to checkout.")
+                    break
+
+                if location_select == "2":
+                    mylocation = "Canada, Calgary, 17 Ave SW, AB T2T 0C3"
+                    print("Location confirmed. You may make further changes to your cart or proceed to checkout.")
+                    break
+
+                if location_select == "3":
+                    break
+                break
+
+        if selection == "4":
+            break
+
+
+def option4(mytotal):
+    global x
+    if "Mona Lisa" in mycart:
+        mytotal = mytotal + 10000
+    if "Starry Night" in mycart:
+        mytotal = mytotal + 12000
+    if "The Creation of Adam" in mycart:
+        mytotal = mytotal + 22000
+    if "The Birth of Venus" in mycart:
+        mytotal = mytotal + 15000
+    if "The Thinker" in mycart:
+        mytotal = mytotal + 16000
+    if "The Scream" in mycart:
+        mytotal = mytotal + 9000
+    if "The Statue of David" in mycart:
+        mytotal = mytotal + 18000
+    if "The Last Supper" in mycart:
+        mytotal = mytotal + 17000
+
+    print("Cart: ", mycart)
+    print("Total: $", mytotal)
+    print("Location: ", mylocation)
+    print(user_phone)
+    print(user_email)
+    confirm = input("Verify the information listed above. Are you ready to proceed to checkout (y/n)? ")
+
+    if confirm == "y":
+        if mytotal == 0:
+            print("You have not added anything to your cart. You must select at least one piece in order to check out.")
+
+        if mylocation == "none":
+            print("You have not yet selected a pickup location. You must select a pickup location in order to check out.")
+
+        else:
+            print("Purchase complete! An agent will contact you soon to discuss a pickup time at your chosen location. Thank you for shopping with us.")
+            x = 0
+
+    if confirm == "n":
+        print("Returning to main menu. Your cart has been saved.")
+        print(" ")
+
+
+while 1:
+    print("----------------------")
+    print(mycart)
+    print("----------------------")
+    print("1. Add art to cart")
+    print("2. Remove art from cart")
+    print("3. Select pickup location")
+    print("4. Proceed to checkout")
+    print("5. Alter contact info")
+    print("0. Exit the program")
+    x = int(input("Select your action: "))
+
+    if x == 1:
+        option1(mytotal)
+
+    if x == 2:
+        option2(mytotal)
+
+    if x == 3:
+        option3(mytotal)
+
+    if x == 4:
+        option4(mytotal)
+
+    if x == 5:
+        user_phone = input("Update phone number (include area code): ")
+        user_email = input("Update email: ")
+
+    if x == 0:
+        break
